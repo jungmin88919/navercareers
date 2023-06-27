@@ -1,0 +1,365 @@
+@import url(./reset.css);
+@import url(./fonts.css);
+@import url(./common.css);
+
+.wrapper{
+    padding-top: 64px;
+}
+
+/* 상단 */
+.header{
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    background-color: #fff;
+}
+.header.on::before{
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    height: 182px;
+    background-color: rgba(255, 255, 255, 0.98);
+    z-index: -1;
+    content: "";
+}
+
+.header .header-inner{
+    display: flex;
+    align-items: center;
+    height: 64px;
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 104px 0 98px;
+    font-size: 17px;
+    line-height: 32px;
+    letter-spacing: -0.36px;
+}
+.header .header-inner .logo a{
+    display: block;
+    background-position: -105px 0px;
+    width: 223px;
+    height: 35px;
+}
+.gnb{
+    margin-left: 39px;
+    height: 100%;
+}
+
+.gnb .nav-list{
+    display: flex;
+    height: 100%;
+}
+.gnb .nav-list .nav-item{
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0 10px;
+}
+
+.gnb .nav-list .sub-list{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 100%;
+    height: 182px;
+}
+.gnb .nav-list .sub-list .sub-item{
+    display: block;
+}
+.gnb .nav-list .sub-list .sub-item a{
+    display: block;
+}
+.gnb .nav-list .sub-list.on{
+    display: flex;
+}
+
+.header .header-inner .side{
+    display: block;
+    margin-left: auto;
+}
+.header .side .side-list{
+    display: flex;
+}
+.header .side .side-item{
+    position: relative;
+    padding: 0 10px;
+}
+.header .side .side-item.lang-item .lang-link{
+    display: none;
+    position: absolute;
+    top: 32px;
+    left: 0;
+    background-color: #fff;
+    padding: 0 10px;
+    font-size: 17px;
+    line-height: 32px;
+    letter-spacing: -0.36px;
+    z-index: 10;
+}
+.header .side .side-item .arrow-btn{
+    display: inline-block;
+    vertical-align: top;
+    margin: 13px 0 0 6px;
+    background-position: -122px -93px;
+    width: 10px;
+    height: 6px;
+    content: '';
+}
+
+/* 언어변경 버튼 셀렉트버튼 클릭시 */
+.header .side .side-item.active .arrow-btn{
+    transform: rotate(180deg);
+}
+.header .side .side-item.active .lang-link{
+    display: block;
+}
+
+
+
+
+
+
+/* footer */
+.footer{
+    position: relative;
+    background-color: #f2f2f2;
+}
+.footer .footer-inner{
+    display: flex;
+    align-items: center;
+    max-width: 1920px;
+    padding: 25px 104px 25px 98px;
+    margin: 0 auto;
+}
+.footer .logo{
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: -0.32px;
+}
+.footer .policy_link{
+    margin-left: 30px;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: -0.28px;
+    color: #909090;
+    font-weight: 700;
+}
+
+.footer .site-inner{
+    position: relative;
+    margin-left: auto;
+}
+.footer .site-box{
+    width: 280px;
+    line-height: 42px;
+    text-align: left;
+    background-color: #f2f2f2;
+}
+.footer .site-box::before{
+    position: absolute;
+    top: 18px;
+    right: 0;
+    background-position: -122px -93px;
+    width: 10px;
+    height: 6px;
+    z-index: 100;
+    content: "";
+}
+.footer .site-box::after{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #000;
+    content: "";
+}
+.footer .site-inner .site-list{
+    display: none;
+    position: absolute;
+    bottom: 42px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: 1000;
+}
+.footer .site-inner .site-item{
+    padding: 0 12px;
+    font-size: 18px;
+    line-height: 42px;
+}
+.footer .site-inner .site-item a{
+    display: block;
+}
+.footer .site-inner .site-item:hover{
+    background-color: #f2f2f2;
+}
+
+
+/* 관련사이트 클릭시  active 활성화*/
+.footer .site-inner.active .site-box{
+    padding: 0 12px;
+    background-color: #fff;
+}
+.footer .site-inner.active .site-box::before{
+    transform: rotate(180deg);
+    right: 5px;
+}
+.footer .site-inner.active .site-box::after{
+    display: none;
+}
+.footer .site-inner.active .site-list{
+    display: block;
+}
+
+.header .btn-menu{
+    display: none;
+}
+.header .side-nav{
+    display: none;
+}
+
+/* 1025 ~ 1230 [1025]*/
+@media (max-width:1230px) {
+    .wrapper{ padding-top: 60px; }
+    .header .header-inner{ padding: 0 22px; height: 60px; }
+    .gnb{ display: none; }
+    .header .side .side-list{ display: none; }
+    .header .btn-menu{ display: block; background-position: -85px -28px; width: 20px; height: 14px; }
+    .header .btn-menu.on{
+        background-position: -85px -49px;
+        width: 15px;
+        height: 15px;
+    }
+    .header .header-inner .logo a{ background-position: 0px 0px; width: 160px; height: 23px; }
+    .header .side-nav{ display: block; visibility: hidden; position: fixed; right: -100%; top: 60px; height: calc(100% - 60px); background: #fff; width: 100%; overflow-y: auto; transition: 0.5s; }
+    .header .side-nav.on{
+        visibility: visible;
+        right: 0;
+    }
+    .header .side-nav .nav-list{
+        padding: 11px 0 9px;
+    }
+    .header .side-nav .nav-list + .nav-list{
+        position: relative;
+        padding: 10px 0 11px;
+    }
+    .header .side-nav .nav-list + .nav-list::before{
+        position: absolute;
+        top: 0;
+        left: 22px;
+        right: 22px;
+        height: 1px;
+        background-color: #d0d0d0;
+        content: "";
+    }
+    .header .side-nav .nav-item{
+        font-family: "TTHoves", "NanumSquare", "나눔스퀘어", "돋움", dotum, arial, sans-serif;
+        font-size: 22px;
+        line-height: 46px;
+        letter-spacing: -0.44px;
+    }
+    .header .side-nav .nav-item .nav-link{
+        display: block;
+        padding: 0 22px;
+    }
+    .header .side-nav .nav-item .under-arrow::after{
+        display: inline-block;
+        vertical-align: top;
+        margin: 20px 0 0 8px;
+        background-position: -136px -49px;
+        width: 10px;
+        height: 6px;
+        content: '';
+    }
+    .header .side-nav .nav-item .sub-list{
+        display: none;
+        padding: 3px 22px 15px;
+    }
+    .header .side-nav .nav-item .sub-item{
+        margin-top: 13px;
+    }
+    .header .side-nav .nav-item .sub-item a{
+        padding-left: 20px;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: -0.36px;
+        background-color: #fff;
+        font-weight: normal;
+    }
+    /* 서브메뉴 활성화시 */
+    .header .side-nav .nav-item.active .nav-link{
+        background-color: #f2f2f2;
+    }
+    .header .side-nav .nav-item.active .under-arrow::after{
+        transform: rotate(-180deg);
+    }
+    .header .side-nav .nav-item.active .sub-list{
+        display: block;
+    }
+    .header .side-nav .nav-item.active .sub-item{
+        margin-top: 0;
+    }
+    .header .side-nav .nav-item.active .sub-item a{
+        padding-left: 20px;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: -0.36px;
+        background-color: #fff;
+        font-weight: normal;
+    }
+    .header .side-nav .lang{
+        padding-top: 19px;
+    }
+    .header .side-nav .lang .nav-link{
+        display: block;
+        margin-bottom: 9px;
+        font-size: 18px;
+        letter-spacing: -0.36px;
+        line-height: 28px;
+        padding: 0 22px;
+    }
+    .header .side-nav .lang .nav-link label::before{
+        content: "";
+        margin: 10px 10px 9px 0;
+        display: inline-block;
+        vertical-align: top;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        border: 1px solid #d0d0d0;
+    }
+    .header .side-nav .lang .nav-link input:checked+label::before{
+        background-color: #000;
+        border: 1px solid #fff;
+    }
+}
+/* (768px~1024) [768px 기준] 테블릿 */
+@media (max-width:1024px) {
+    
+    .footer .footer-inner{
+        flex-wrap: wrap;
+    }
+    .footer .site-inner{
+        margin-top: 15px;
+        width: 100%;
+        font-size: 12px;
+        color: #1d1d1d;
+        line-height: 40px;
+    }
+    .footer .site-inner.active .site-box{
+        width: 100%;
+    }
+    .footer .site-inner .site-item{
+        font-size: 12px;
+        padding: 0 12px;
+    }
+}
+/* 320~767px [320 기준] */
+@media (max-width:767px) {
+    
+}

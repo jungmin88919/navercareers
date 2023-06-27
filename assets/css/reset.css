@@ -1,0 +1,21 @@
+
+:root{
+    -webkit-tap-highlight-color:transparent;-webkit-text-size-adjust:100%;text-size-adjust:100%;cursor:default;line-height:1.5;overflow-wrap:break-word;-moz-tab-size:4;tab-size:4; 
+}
+
+* { margin:0;padding:0;font:inherit;color:inherit; }
+*, :after, :before { box-sizing:border-box;flex-shrink:0; }
+html, body { height:100%; line-height: 1;}
+img, picture, video, canvas, svg { display: block;max-width:100%; }
+button { background:none;border:0;cursor:pointer; }
+a { text-decoration:none }
+table { border-collapse:collapse;border-spacing:0 }
+ul { list-style: none;}
+fieldset,select,input,input[type="radio"]{border: 0;outline: none;appearance: none;-webkit-appearance: none;-moz-appearance: none;}
+
+body{
+    font-family: "TTHoves", "NanumSquare", "나눔스퀘어", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Apple SD Gothic Neo", "돋움", dotum, arial, sans-serif;
+    height: 100%;
+    min-height: 100%;
+    -webkit-text-size-adjust: none;
+}

@@ -1,0 +1,73 @@
+.blind {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+}
+
+/* 스프라이트 이미지 */
+.sc-search .popup-search .filter-box .sub-item a::before,
+.sc-search .popup-search .filter-box .filter-tree::before,
+.sc-search .popup-search .search-box .search-btn,
+.header .side .side-item .arrow-btn,
+.footer .site-box::before,
+.sc-support .support-link::after,
+.control-area .btn,
+.sc-teams .teams-item a dt .count::before,
+.sc-search .icon-box,
+.header-inner .logo a{
+    background-image: url('../images/sp_pc.png');
+    background-size: 328px 205px;
+    background-repeat: no-repeat;
+}
+
+.wrapper{
+    overflow-x: hidden;
+}
+
+/* 스와이퍼 버튼 */
+.control-area{
+    display: flex;
+    gap: 8px;
+    position: absolute; 
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+.control-area .btn{
+    background-position: -187px -172px;
+    height: 32px;
+    width: 33px;
+}
+.control-area .prev{
+
+}
+.control-area .next{
+    transform: rotate(-180deg);
+}
+.swiper-button-disabled{
+    opacity: 0.5;
+}
+
+
+/* 1025 ~ 1230 [1025]*/
+@media (max-width:1230px) {
+    .sc-search .popup-search .pop-close,
+    .sc-search .group-search2 .btn-search::after,
+    .header .side-nav .nav-item .under-arrow::after,
+    .header .btn-menu,
+    .header .header-inner .logo a,.header .btn-menu.on{
+        background-image: url('https://recruit.navercorp.com/share/tmplat/naver/img/sp_mo.png');
+        background-size: 195px 181px;
+    }
+}
+/* (768px~1024) [768px 기준] 테블릿 */
+@media (max-width:1024px) {
+    
+}
+/* 320~767px [320 기준] */
+@media (max-width:767px) {
+    
+}
